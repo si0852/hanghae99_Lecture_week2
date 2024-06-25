@@ -10,19 +10,16 @@ import lombok.NoArgsConstructor;
 @Entity
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class User {
+public class Users {
 
     @Id
-    private String userId;
+    private long userId;
 
     private String userName;
 
-    private String email;
-
     @Builder
-    public User(String userId, String userName, String email) {
+    public Users(long userId, String userName) {
         this.userId = userId;
         this.userName = userName;
-        this.email = email;
     }
 }
